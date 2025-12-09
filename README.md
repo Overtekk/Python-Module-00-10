@@ -1,2 +1,29 @@
-# Python-Module-00-10
-Introduction to Python language in the 42 new cursus
+<p align="center">
+  <img src="assets_github/so_long.png" width="350" />
+</p>
+<h3 align="center">
+  <em>Discover the Python langage</em>
+</h3>
+
+---
+
+## ⚠️ Disclaimer
+
+- **Full Portfolio:** This repository focuses on this specific project. You can find my entire 42 curriculum 👉 [here](https://github.com/Overtekk/42).
+- **Subject Rules:** I strictly follow the rules regarding 42 subjects; I cannot share the PDFs, but I explain the concepts in this README.
+- **Archive State:** The code is preserved exactly as it was during evaluation (graded state). I do not update it, so you can see my progress and mistakes from that time.
+- **Academic Integrity:** I encourage you to try the project yourself first. Use this repo only as a reference, not for copy-pasting. Be patient, you will succeed.
+
+## 📂 Purpose
+
+to do
+
+## 🐨 Status
+
+** Not Completed **
+
+## 🔷 Usage
+
+to do
+
+---
