@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets_github/so_long.png" width="350" />
+  <img src="" width="350" />
 </p>
 <h3 align="center">
   <em>Discover the Python langage</em>
