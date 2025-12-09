@@ -31,7 +31,7 @@ Unlike C, where we manage every byte of memory and pointers manually, Python for
 git clone https://github.com/Overtekk/Python-Module-00-10.git
 ```
 
-### Unlike C, there is no `make` or `cc`. You run scripts directly with the Python interpreter.\
+### ⚠️⚠️ Unlike C, there is no `make` or `cc`. You run scripts directly with the Python interpreter. ⚠️⚠️
 ### For example:
 ```bash
 python3 main.py
