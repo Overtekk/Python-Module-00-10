@@ -1,37 +1,57 @@
+class Plant:
+    """Plant model with NAME, HEIGHT and AGE"""
+
+    def __init__(self, *, name: str, height: int, days: int) -> None:
+        """Initialize a plant"""
+
+        self.name = name
+        self.height = height
+        self.days = days
+
+    def get_info(self, *, curr_day: int) -> str:
+        """Return a string about plant information"""
+
+        plant_info = f"{self.name}: {self.height}cm, {self.days} days old"
+
+        if curr_day > 1:
+            growth_info = f"Growth this week: +{self.total}cm"
+            return plant_info + "\n" + growth_info
+
+        return plant_info
+
+    def grow(self, *, growth_size: int) -> None:
+        """Update growth size based on current day"""
+
+        self.total = growth_size
+        self.height += growth_size
+
+    def age(self, *, days_passed: int) -> None:
+        """Update day"""
+
+        self.days += days_passed
+
+
 def ft_plant_growth():
-    class Plant:
-        def __init__(self, name, height, days, current_day, total):
-            self.name = name
-            self.height = height
-            self.days = days
-            self.current_day = current_day
-            self.total = total
+    """Simulate a week of growth for plant"""
 
-        def get_info(self):
-            print(f"=== Day {self.current_day} ===")
-            print(f"{self.name}: {self.height}cm, {self.days} days old")
-            if self.current_day > 1:
-                print(f"Growth this week: +{self.total}cm")
+    plant_one = Plant(name="Rose", height=25, days=30)
 
-        def current_days(self):
-            self.current_day += 6
+    curr_day = 1
 
-        def grow(self):
-            self.total = self.height
-            self.height += 6
-            self.total = self.height - self.total
+    print(f"=== Day {curr_day} ===")
+    print(plant_one.get_info(curr_day=curr_day))
 
-        def age(self):
-            self.days += 6
+    day_passed = 6
+    curr_day += day_passed
 
-    plant_one = Plant("Rose", 25, 30, 1, 0)
+    print(f"=== Day {curr_day} ===")
 
-    plant_one.get_info()
-    plant_one.current_days()
-    plant_one.grow()
-    plant_one.age()
-    plant_one.get_info()
+    growth_amount = 1 * day_passed
+
+    plant_one.grow(growth_size=growth_amount)
+    plant_one.age(days_passed=day_passed)
+    print(plant_one.get_info(curr_day=curr_day))
 
 
-# if __name__ == "__main__":
-#     ft_plant_growth()
+if __name__ == "__main__":
+    ft_plant_growth()
