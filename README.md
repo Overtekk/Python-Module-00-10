@@ -24,7 +24,7 @@ Unlike C, where we manage every byte of memory and pointers manually, Python for
 
 **Module 1** completed on **15/12/2025**\
 <p align="left">
-  <img src="assets_github/python_module0_score.png" width="50" />
+  <img src="assets_github/python_module0_score.png" width="100" />
 </p>
 
 ## 🔷 Usage
