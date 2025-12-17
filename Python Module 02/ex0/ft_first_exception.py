@@ -1,9 +1,11 @@
 def check_temperature(temp_str: str) -> int | None:
-    """Check the temperature and return it if it's valid"""
+    """Check the temperature and return it if it's valid.
+    We put "#noqa: E722" after "except", since we can't use specific error
+    type (not allowed on the subject), and flake8 doesn't like empty except"""
 
     try:
         temperature = int(temp_str)
-    except ValueError:
+    except:  # noqa: E722
         print(f"Error: '{temp_str}' is not a valid number")
         return None
     else:
@@ -32,7 +34,7 @@ def test_temperature_input() -> None:
 
     for data in input:
         print(f"Testing temperature: {data}")
-        check_temperature(data)
+        check_temperature(temp_str=data)
         print("")
 
     print("All tests completed - program didn't crash!")
