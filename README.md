@@ -42,6 +42,11 @@ Unlike C, where we manage every byte of memory and pointers manually, Python for
   <img src="assets_github/python_module3_score.png" width="100" />
 </p>
 
+**Module 4** completed on **10/01/2026**\
+<p align="left">
+  <img src="assets_github/python_module4_score.png" width="100" />
+</p>
+
 ## 🔷 Usage
 
 ### First, git clone this repo:
