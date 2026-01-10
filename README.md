@@ -22,27 +22,27 @@ Unlike C, where we manage every byte of memory and pointers manually, Python for
 
 ## 🐨 Status
 
-**Module 0** completed on **15/12/2025**\
+**Module 0** completed on **15/12/2025**
 <p align="left">
   <img src="assets_github/python_module0_score.png" width="100" />
 </p>
 
-**Module 1** completed on **18/12/2025**\
+**Module 1** completed on **18/12/2025**
 <p align="left">
   <img src="assets_github/python_module1_score.png" width="100" />
 </p>
 
-**Module 2** completed on **22/12/2025**\
+**Module 2** completed on **22/12/2025**
 <p align="left">
   <img src="assets_github/python_module2_score.png" width="100" />
 </p>
 
-**Module 3** completed on **06/01/2026**\
+**Module 3** completed on **06/01/2026**
 <p align="left">
   <img src="assets_github/python_module3_score.png" width="100" />
 </p>
 
-**Module 4** completed on **10/01/2026**\
+**Module 4** completed on **10/01/2026**
 <p align="left">
   <img src="assets_github/python_module4_score.png" width="100" />
 </p>
