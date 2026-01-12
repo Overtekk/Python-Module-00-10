@@ -7,8 +7,10 @@ import random
 
 
 class FantasyCardFactory(CardFactory):
+    """Create set of cards based of the Fantasy Theme."""
 
     def __init__(self):
+        """Initialize types of cards and stats of each cards."""
         self.types = {
             "creatures": ["Dragon", "Goblin", "Rat", "Skeleton", "Zombie",
                           "Worm", "Troll", "Licorn", "Clown", "Vampire",
@@ -31,7 +33,8 @@ class FantasyCardFactory(CardFactory):
             "Goblin": {"cost": 4, "rare": "Common", "atk": 3, "hp": 6},
             "Rat": {"cost": 2, "rare": "Common", "atk": 1, "hp": 3},
             "Zombie": {"cost": 3, "rare": "Common", "atk": 1, "hp": 5},
-            "Worm": {"cost": 1, "rare": "Common", "atk": 1, "hp": 1}
+            "Worm": {"cost": 1, "rare": "Common", "atk": 1, "hp": 1},
+            "Acarian": {"cost": 0, "rare": "Bad", "atk": 0, "hp": 1}
         }
 
         self.spell_stats = {
@@ -55,7 +58,17 @@ class FantasyCardFactory(CardFactory):
                      "effect": "mana"}
         }
 
+        self.size_of_deck = 0
+
     def create_creature(self, name_or_power: str) -> Card:
+        """Create cards of type Creature.
+
+        === Args ===
+            - name_or_power (str): The name of the card.
+
+        === Return ===
+            - Card: The card created
+        """
         stats = self.creature_stats.get(name_or_power, {
             "cost": 1, "rare": "Common", "atk": 1, "hp": 1})
 
@@ -68,6 +81,14 @@ class FantasyCardFactory(CardFactory):
         )
 
     def create_spell(self, name_or_power: str) -> Card:
+        """Create cards of type Spell.
+
+        === Args ===
+            - name_or_power (str): The name of the card.
+
+        === Return ===
+            - Card: The card created
+        """
         stats = self.spell_stats.get(name_or_power, {
             "cost": 1, "rare": "Common", "effect": "damage"})
 
@@ -79,6 +100,14 @@ class FantasyCardFactory(CardFactory):
         )
 
     def create_artifact(self, name_or_power: str) -> Card:
+        """Create cards of type Artifact.
+
+        === Args ===
+            - name_or_power (str): The name of the card.
+
+        === Return ===
+            - Card: The card created
+        """
         stats = self.artifact_stats.get(name_or_power, {
             "cost": 1, "rare": "Common", "durability": 1, "effect": "mana"})
 
@@ -91,12 +120,26 @@ class FantasyCardFactory(CardFactory):
         )
 
     def create_themed_deck(self, size: int) -> dict:
+        """Create the theme deck with a size choosed by the user.
+
+        === Args ===
+            - size (int): The size of the deck.
+
+        === Return ===
+            - dict: The deck in dict format.
+
+        Depending of the size, a number of cards will be predetermined. If the
+        size is between 1 and 3, only CreatureCard will be created. For a
+        higher size, the number left will be for SpellCard. Only 1 ArtifactCard
+        will be created in total.
+        """
         deck = {
             "creatures": [],
             "spells": [],
             "artifacts": []
         }
         artifacts_n = 0
+        self.size_of_deck = size
 
         if size == 1:
             deck["creatures"].append(self.create_creature
@@ -132,4 +175,9 @@ class FantasyCardFactory(CardFactory):
         return deck
 
     def get_supported_types(self) -> dict:
+        """Return the supported types.
+
+        === Return ===
+            - dict: Available types of cards (self.types)
+        """
         return self.types
