@@ -18,10 +18,8 @@ class EliteCard(Card, Combatable, Magical):
             - health (int): Health points.
             - defense (int): The defense point of the card
         """
-        super().__init__(name, cost, rarity)
-        self.attack_val = attack
-        self.health = health
-        self.defense = defense
+        Card.__init__(self, name, cost, rarity)
+        Combatable.__init__(self, attack, health, defense)
         self.type = "Elite"
 
     def play(self, game_state: dict) -> dict:
@@ -34,6 +32,8 @@ class EliteCard(Card, Combatable, Magical):
         === Return ===
             - dict: Result of the play action (success or error).
         """
+        if "mana_left" not in game_state:
+            raise KeyError("'mana_left' key is missing")
         if self.is_playable(game_state.get("mana_left")):
             target = game_state.get("targets")
             if target is not None:
@@ -79,6 +79,10 @@ class EliteCard(Card, Combatable, Magical):
         === Return ===
             - dict: Summary of the defense.
         """
+        try:
+            int(incoming_damage)
+        except ValueError:
+            raise ValueError("ERROR: Incoming_damage must be an int.")
         damage = max(0, incoming_damage - self.defense)
         self.health -= damage
         if self.health <= 0:
@@ -134,6 +138,10 @@ class EliteCard(Card, Combatable, Magical):
         === Return ===
             - dict: Summary of the mana channeling.
         """
+        try:
+            int(amount)
+        except ValueError:
+            raise ValueError("ERROR: amount must be an int.")
         return ({
             "channeled": amount,
             "total_mana": 7
