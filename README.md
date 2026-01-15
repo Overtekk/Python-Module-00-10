@@ -1,76 +1,67 @@
-<p align="center">
-  <img src="assets_github/python_modules.png" width="350" />
-</p>
-<h3 align="center">
-  <em>Discover the Python langage with 10 modules</em>
-</h3>
+# [Python Module 00](https://github.com/Overtekk/Python-Module-00-10/tree/main/Python%20Module%2000)
+###  *Python Fundamentals Through Garden Data*
 
----
+✅ *Completed on **15/12/2025***
 
-## ⚠️ Disclaimer
+*Score*\
+![python_module0_score](../../../assets/Scores/42cursus/Circle%202/python_module0_score.png)
 
-- **Full Portfolio:** This repository focuses on this specific project. You can find my entire 42 curriculum 👉 [here](https://github.com/Overtekk/42).
-- **Subject Rules:** I strictly follow the rules regarding 42 subjects; I cannot share the PDFs, but I explain the concepts in this README.
-- **Archive State:** The code is preserved exactly as it was during evaluation (graded state). I do not update it, so you can see my progress and mistakes from that time.
-- **Academic Integrity:** I encourage you to try the project yourself first. Use this repo only as a reference, not for copy-pasting. Be patient, you will succeed.
+# [Python Module 01](https://github.com/Overtekk/Python-Module-00-10/tree/main/Python%20Module%2001)
+###  *Object-Oriented Garden Systems*
 
-## 📂 Purpose
+✅ *Completed on **18/12/2025***
 
-The goal of this series of modules is to dive into **Python**, transitioning from a strict C background to a high-level, interpreted language. It serves as an introduction to **Object-Oriented Programming (OOP)**, **Data Science basics**, and **Pythonic syntax**.
+*Score*\
+![python_module1_score](../../../assets/Scores/42cursus/Circle%202/python_module1_score.png)
 
-Unlike C, where we manage every byte of memory and pointers manually, Python forces us to think differently: using built-in data structures, list comprehensions, and handling exceptions gracefully rather than crashing with segfaults.
+# [Python Module 02](https://github.com/Overtekk/Python-Module-00-10/tree/main/Python%20Module%2002)
+###  *Data Engineering for Smart Agriculture*
 
-## 🐨 Status
+✅ *Completed on **22/12/2025***
 
-**Module 0** completed on **15/12/2025**
-<p align="left">
-  <img src="assets_github/python_module0_score.png" width="100" />
-</p>
+*Score*\
+![python_module2_score](../../../assets/Scores/42cursus/Circle%202/python_module2_score.png)
 
-**Module 1** completed on **18/12/2025**
-<p align="left">
-  <img src="assets_github/python_module1_score.png" width="100" />
-</p>
+# [Python Module 03](https://github.com/Overtekk/Python-Module-00-10/tree/main/Python%20Module%2003)
+###  *Mastering Python Collections for Data Engineering*
 
-**Module 2** completed on **22/12/2025**
-<p align="left">
-  <img src="assets_github/python_module2_score.png" width="100" />
-</p>
+✅ *Completed on **06/01/2026***
 
-**Module 3** completed on **06/01/2026**
-<p align="left">
-  <img src="assets_github/python_module3_score.png" width="100" />
-</p>
+*Score*\
+![python_module3_score](../../../assets/Scores/42cursus/Circle%202/python_module3_score.png)
 
-**Module 4** completed on **10/01/2026**
-<p align="left">
-  <img src="assets_github/python_module4_score.png" width="100" />
-</p>
+# [Python Module 04](https://github.com/Overtekk/Python-Module-00-10/tree/main/Python%20Module%2004)
+###  *Archivist Training Protocol*
 
-**Module 5** completed on **13/01/2026**
-<p align="left">
-  <img src="assets_github/python_module5_score.png" width="100" />
-</p>
+✅ *Completed on **10/01/2026***
 
-**Module 6** completed on **15/01/2026**
-<p align="left">
-  <img src="assets_github/python_module6_score.png" width="100" />
-</p>
+*Score*\
+![python_module4_score](../../../assets/Scores/42cursus/Circle%202/python_module4_score.png)
 
-## 🔷 Usage
+# [Python Module 05](https://github.com/Overtekk/Python-Module-00-10/tree/main/Python%20Module%2005)
+###  *Polymorphic Data Streams in the Digital Matrix*
 
-### First, git clone this repo:
-```bash
-git clone https://github.com/Overtekk/Python-Module-00-10.git
-```
+✅ *Completed on **13/01/2026***
 
-### ⚠️⚠️ Unlike C, there is no `make` or `cc`. You run scripts directly with the Python interpreter. ⚠️⚠️
-### For example:
-```bash
-python3 main.py
-```
+*Score*\
+![python_module5_score](../../../assets/Scores/42cursus/Circle%202/python_module5_score.png)
 
-### Those projects are more like exercices to teach us how Python works. I encourage you to go inside each folder to have more information (I will try to make them).\
-### There are no main for all exercices, but you can write your own main!
+# [Python Module 06](https://github.com/Overtekk/Python-Module-00-10/tree/main/Python%20Module%2006)
+###  *Mastering Python’s Import Mysteries*
 
----
+✅ *Completed on **15/01/2026***
+
+*Score*\
+![python_module6_score](../../../assets/Scores/42cursus/Circle%202/python_module6_score.png)
+
+# [Python Module 07](https://github.com/Overtekk/Python-Module-00-10/tree/main/Python%20Module%2007)
+###  *Master the Art of Abstract Card Architecture*
+
+# [Python Module 08](https://github.com/Overtekk/Python-Module-00-10/tree/main/Python%20Module%2008)
+###  *Welcome to the Real World of Data Engineering*
+
+# [Python Module 09](https://github.com/Overtekk/Python-Module-00-10/tree/main/Python%20Module%2009)
+###  *Discover Pydantic Models & Validation*
+
+# [Python Module 10](https://github.com/Overtekk/Python-Module-00-10/tree/main/Python%20Module%2010)
+###  *Master the Ancient Arts of Functional Programming*

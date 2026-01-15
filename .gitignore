@@ -16,6 +16,7 @@ pip-log.txt
 .venv/
 venv/
 env/
+matrix_env/
 
 #Other
 .DS_STORE
@@ -28,3 +29,4 @@ exercise_0_help.py
 exercise_1_helper.py
 data-generator-tools/
 Python Module 04/ex1/*.txt
+Python Module 08/ex1/matrix_analysis.png
