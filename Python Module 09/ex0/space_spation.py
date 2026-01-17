@@ -1,5 +1,5 @@
-from typing import Any, List
-from pydantic import BaseModel, Field, ValidationError, field_validator, model_validator
+from typing import Any, Dict
+from pydantic import BaseModel, Field, ValidationError
 from datetime import datetime
 
 
@@ -25,12 +25,39 @@ class SpaceStation(BaseModel):
     oxygen_level: float = Field(ge=0.0, le=100.0)
     last_maintenance: datetime
     is_operational: bool = True
-    notes: str = Field(min_length=0, max_length=200, default=None)
+    notes: str | None = Field(min_length=0, max_length=200, default=None)
 
-    # @model_validator(mode=’after’)
-    # def check_value(data: List[Any]) -> SpaceStation:
+
+def create_station(data: Dict[str, Any]) -> SpaceStation | None:
+    """"Create a station using a dictionary.
+
+    === Args ===
+        - data (Dict[str, Any]): A dictionary containing station data. Keys
+          must match the SpaceStation field names.
+
+    === Returns ===
+        - SpaceStation: the object if data are validated.
+        - None: none if data are not validated.
+    """
+    try:
+        # '**data' unpack the dict, so key and value become key='value'
+        station = SpaceStation(**data)
+        return station
+
+    except ValidationError as e:
+        print("Invalid station created:")
+        print(f"{type(e).__name__}", end=" - ")
+        for item in e.errors():
+            print(f"{item['loc']}: {item['msg']}")
+        return None
+
 
 def print_informations(station: SpaceStation) -> None:
+    """"Print informations about the SpaceStation.
+
+    === Args ===
+        - station (SpaceStation): The SpaceStation object and validated.
+    """
     print("Valid station created:")
     print(f"ID: {station.station_id}")
     print(f"Name: {station.name}")
@@ -40,26 +67,10 @@ def print_informations(station: SpaceStation) -> None:
     print(f"Datetime: {station.last_maintenance}")
     if not station.is_operational:
         print("Status: False")
-    print("Status: True")
+    else:
+        print("Status: True")
     if station.notes is not None:
         print(f"Notes: {station.notes}")
-
-
-def create_station(data: List[Any]) -> SpaceStation | None:
-    try:
-        station = SpaceStation(station_id=data[0],
-                            name=data[1],
-                            crew_size=data[2],
-                            power_level=data[3],
-                            oxygen_level=data[4],
-                            last_maintenance=data[5],
-                            is_operational=data[6]
-                            )
-        return station
-    except ValidationError as e:
-        print("Invalid station created:")
-        print(f"{type(e).__name__} - {e.errors()}\n")
-        return None
 
 
 def main() -> None:
@@ -67,20 +78,54 @@ def main() -> None:
     print("========================================")
 
     date = datetime.now()
-    date_wrong = '2025-01-06T10:01:06Z'
+    date_amg = '2023-04-23T10:01:06Z'
+    date_wrong = 'oui baguette'
 
     # Good values
-    station_list = ('ISS001', 'International Space Station', 6, 85.5,
-                    92.3, date, True, "There are 2 imposteurs among us")
+    station_list = {
+        'station_id': 'ISS001',
+        'name': 'International Space Station',
+        'crew_size': 6,
+        'power_level': 85.5,
+        'oxygen_level': 92.3,
+        'last_maintenance': date,
+        'is_operational': True
+    }
+    # Good values (with note)
+    station_list2 = {
+        'station_id': 'AMG_001',
+        'name': 'Polux Spaceship',
+        'crew_size': 10,
+        'power_level': 66.6,
+        'oxygen_level': 23.3,
+        'last_maintenance': date_amg,
+        'is_operational': False,
+        'notes': "There are 2 imposteurs among us"
+    }
     # Wrong Values
-    wrong_station = ('id_0123456789', 'I', 21, 105.00,
-                     -01.00, date_wrong, "hey", 123)
-    # Specific Wrong Values
-    almost_wrong_station = ('ERR002', 'I', 1, 01.00,
-                            100.00, date_wrong, False, 123)
+    wrong_station = {
+        'station_id': 'id_0123456789',
+        'name': 'I',
+        'crew_size': 21,
+        'power_level': 105.00,
+        'oxygen_level': -01.00,
+        'last_maintenance': date_wrong,
+        'is_operational': "hey",
+        'notes': 123
+    }
+    # Wrong Values
+    almost_wrong_station = {
+        'name': 'No ID Station',
+        'crew_size': 5
+    }
 
     print("- Creating ISS001 -")
     station = create_station(station_list)
+    if station is not None:
+        print_informations(station)
+
+    print("\n- Creating AMG_001 -")
+    station = create_station(station_list2)
     if station is not None:
         print_informations(station)
 
