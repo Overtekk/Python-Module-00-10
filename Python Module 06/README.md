@@ -1,4 +1,4 @@
-# Python Module 07
+# Python Module 06
 
 #### Here, you will learn how to organize your code into modules and packages, master the art of `import`, understand the role of `__init__.py`, and avoid the trap of circular imports.
 
