@@ -120,7 +120,7 @@ Those modules allow us to do future Python project, so there are very importants
 ---
 ### [Python Module 10](https://github.com/Overtekk/Python-Module-00-10/tree/main/Python%20Module%2010)
 *Master the Ancient Arts of Functional Programming*\
-*Not completed*
+✅ *Completed on **24/01/2026***
 
 ### *Score:*
 <p align="left">
