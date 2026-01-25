@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets_github/python_modules.png?v=2" width="250" />
+  <img src="assets_github/python_modules.png?v=42" width="250" />
 </p>
 <h3 align="center">
   <em>Learn Python basics</em>
@@ -128,4 +128,5 @@ Those modules allow us to do future Python project, so there are very importants
 </p>
 
 ---
+
 
